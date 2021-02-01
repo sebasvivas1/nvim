@@ -1,12 +1,18 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Environment Variables
 GOPATH="/usr/local/go"
 GOBIN="/usr/local/go/bin"
-SNAP="/var/lib/snapd/snap"
 EXERCISM="$HOME/Exercism"
-DENO_INSTALL="$HOME/.deno"
+DENO_INSTALL="/home/joshua/.deno"
+ANDROID_STUDIO="$HOME/AndroidStudio"
 
-export PATH="$PATH:$GOPATH:$GOBIN:$SNAP/bin:$EXERCISM/bin:$DENO_INSTALL/bin:$PROTOC/bin"
+# PATH
+export PATH="$PATH:$GOPATH:$GOBIN:$EXERCISM/bin:$DENO_INSTALL/bin:$PROTOC/bin:$ANDROID_STUDIO/bin"
+
+# Yarn Global
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Editor Global
+export EDITOR='nvim'
 
 # Postgre Path
 export PGDATA="/var/lib/pgsql/data"
@@ -16,18 +22,46 @@ export PGLOG="/var/lib/pgsql/pgstartup.log"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/joshua/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="jam" # my own zsh theme
+### Features ###
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# My own zsh theme
+ZSH_THEME="jam" 
 
+# Plugins
+plugins=(git zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
+# Aliases
+alias v=neovim
+alias c=clear
+alias gh=printGithub
+alias config-zsh="nvim $HOME/.zshrc"
+alias config-vim="nvim $HOME/.vimrc"
+alias installed="dnf list installed"
+alias studio="$HOME/AndroidStudio/bin/studio.sh"
+alias files="nautilus ."
+alias off="shutdown -P now"
+alias repos="cd /etc/yum.repos.d/"
+alias runmongo="sudo mongod --dbpath /var/lib/mongo --port 27017"
+alias onpostgre="sudo systemctl start postgresql && sudo systemctl start pgadmin4"
+alias offpostgre="sudo systemctl stop postgresql && sudo systemctl stop pgadmin4"
+
+# Functions
+function neovim {
+  if [ $# -eq 0 ]; then
+    nvim ./
+  else
+    nvim $1
+  fi
+}
+
+function printGithub {
+  echo 'Github'
+  echo 'My Github Hash'
+}
+
+### If an option is activated relocate in ### Features ### section ###
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -71,66 +105,3 @@ ZSH_THEME="jam" # my own zsh theme
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# you must install the zsh plugin "zsh-autosuggestions"
-# - https://github.com/zsh-users/zsh-autosuggestions
-plugins=(git zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export EDITOR='nvim'
-
-alias v=neovim
-alias c=clear
-alias github=printGithub
-alias config-zsh="nvim $HOME/.zshrc"
-alias config-vim="nvim $HOME/.vimrc"
-alias installed="dnf list installed"
-
-function neovim {
-  if [ $# -eq 0 ]; then
-    nvim ./
-  else
-    nvim $1
-  fi
-}
-
-function printGithub {
-  echo 'Github'
-  echo 'MyGithubHash'
-}

@@ -1,4 +1,4 @@
-let mapleader=' '
+let mapleader= ' '
 
 " Key Remaps
 " :noremap <C-n> :NERDTreeToggle<CR>

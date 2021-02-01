@@ -2,13 +2,14 @@ call plug#begin('~/.vim/plugged')
   
   " Syntax / Languaje
   Plug 'pangloss/vim-javascript' " Javascript Languaje
-  Plug 'leafgarland/typescript-vim'
+  Plug 'HerringtonDarkholme/yats.vim' " Typescript Languaje
   Plug 'maxmellon/vim-jsx-pretty' " JSX Syntax
   Plug 'neoclide/vim-jsx-improve' " JSX Syntax Improve
   Plug 'peitalin/vim-jsx-typescript' " JSX Syntax typescript Support
   Plug 'posva/vim-vue' " Vue Languaje
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go Languaje
-  
+  Plug 'iloginow/vim-stylus' " Stylus Support
+
   " Features
   Plug 'preservim/nerdtree' " Sidebar files feature
   Plug 'itchyny/lightline.vim' " Lightline
@@ -18,6 +19,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive' " Git Support
   Plug 'airblade/vim-gitgutter' " Git Files Support
   Plug 'scrooloose/nerdcommenter' " Comments Support	
+
 
   " Themes & Interface
   Plug 'sainnhe/gruvbox-material' " Retro Theme for Vim in Material Desing

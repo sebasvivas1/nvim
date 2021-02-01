@@ -1,6 +1,7 @@
-set nocompatible
-set encoding=utf8
-set nu rnu
+" My vimrc config file
+
+set number
+set rnu
 set numberwidth=1
 set clipboard=unnamed
 set noswapfile
@@ -18,6 +19,10 @@ set scrolloff=10
 set signcolumn=yes
 set ignorecase
 set updatetime=300
+set undofile
+set undodir=~/.vim/undo
+set undolevels=10000
+
 syntax enable
 filetype plugin indent on
 
