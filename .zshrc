@@ -1,6 +1,7 @@
 # Environment Variables
-GOPATH="/usr/local/go"
-GOBIN="/usr/local/go/bin"
+GOROOT="/usr/local/go"
+GOPATH="$HOME/go"
+GOBIN="$GOROOT/bin"
 EXERCISM="$HOME/Exercism"
 DENO_INSTALL="/home/joshua/.deno"
 ANDROID_STUDIO="$HOME/android-studio"
@@ -8,9 +9,11 @@ NVIM="$HOME/Neovim"
 FLUTTER="$HOME/Flutter"
 SNAP="/var/lib/snapd/snap"
 JAVA="/usr/lib/jvm/jdk1.8.0_231"
+RUST="$HOME/.cargo/env"
+PROTOC="$HOME/Protoc"
 
 # PATH
-export PATH="$PATH:$GOPATH:$GOBIN:$EXERCISM/bin:$DENO_INSTALL/bin:$PROTOC/bin:$ANDROID_STUDIO/bin:$NVIM/usr/bin:$FLUTTER/bin:$JAVA/bin:$FIGMA/bin"
+export PATH="$PATH:$GOROOT:$GOPATH:$GOBIN:$EXERCISM/bin:$DENO_INSTALL/bin:$PROTOC/bin:$ANDROID_STUDIO/bin:$NVIM/bin:$FLUTTER/bin:$JAVA/bin:$RUST:$PROTOC/bin:$SNAP/bin"
 
 # Yarn Global
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -40,14 +43,16 @@ alias v=neovim
 alias c=clear
 alias gh=printGithub
 alias gl=printGitlab
-alias config-zsh="nvim $HOME/.zshrc"
-alias gh=printGithub
-alias config-vim="nvim $HOME/.vimrc"
+alias zsh-config="nvim $HOME/.zshrc"
+alias vim-config="nvim $HOME/.vimrc"
 alias installed="dnf list installed"
 alias studio="$ANDROID_STUDIO/bin/studio.sh"
-alias files="nautilus ."
+alias files="nautilus . &"
 alias off="shutdown -P now"
 alias repos="cd /etc/yum.repos.d/"
+alias f="fzf"
+alias ondock="systemctl start docker"
+alias upgrade="sudo dnf upgrade"
 
 # Functions
 function neovim {
