@@ -21,7 +21,7 @@ set ignorecase
 set updatetime=300
 set undofile
 set undodir=~/.vim/undo
-set undolevels=10000
+set undolevels=1000
 
 syntax enable
 filetype plugin indent on

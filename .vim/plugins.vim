@@ -14,14 +14,19 @@ call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree' " Sidebar files feature
   Plug 'itchyny/lightline.vim' " Lightline
   Plug 'editorconfig/editorconfig-vim' " Editorconfig Support
-  Plug 'kien/ctrlp.vim' " CTRL-P feature
   Plug 'tpope/vim-fugitive' " Git Support
   Plug 'airblade/vim-gitgutter' " Git Files Support
   Plug 'scrooloose/nerdcommenter' " Comments Support	
-  Plug 'frazrepo/vim-rainbow'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'alvan/vim-closetag'
+  Plug 'tpope/vim-surround'
+  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
   " Themes & Interface
   Plug 'sainnhe/gruvbox-material' " Retro Theme for Vim in Material Desing
+
 
   " Coc
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
