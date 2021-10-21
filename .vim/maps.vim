@@ -66,8 +66,6 @@ function! s:CheckBackSpace() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
 inoremap <silent><expr> <c-space> coc#refresh()
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -75,7 +73,9 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> U :call <SID>show_documentation()<CR>
 
 " Prettier / CocPrettier Maps
-:noremap <Leader>p :Prettier<cr>
+" :noremap <Leader>p :Prettier<cr>
+" command! -nargs=0 Prettier :CocCommand prettier.formatFile
+:noremap <Leader>p :CocCommand prettier.formatFile<cr>
 
 " GitGutter Maps
 :noremap <Leader>g :GitGutterPreviewHunk<cr>

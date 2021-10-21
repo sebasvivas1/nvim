@@ -27,7 +27,6 @@ call plug#begin('~/.vim/plugged')
   " Themes & Interface
   Plug 'sainnhe/gruvbox-material' " Retro Theme for Vim in Material Desing
 
-
   " Coc
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 

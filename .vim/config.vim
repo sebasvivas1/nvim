@@ -76,8 +76,10 @@ let g:gruvbox_material_palette = "original"
 let g:gruvbox_material_background = 'hard'
 
 " Prettier Config
+au FileType css,scss let b:prettier_exec_cmd = "prettier-stylelint"
+
 let g:prettier#quickfix_enabled = 0
-let g:prettier#config#config_precedence = 'file-override'
+let g:prettier#config#config_precedence = 'pref-file'
 let g:prettier#config#tab_width = '2'
 let g:prettier#config#use_tabs = 'false'
 let g:prettier#config#print_width = '80'
@@ -109,5 +111,5 @@ let g:coc_global_extensions = [
   \ 'coc-tag',
   \ 'coc-tsserver',
   \ 'coc-vetur',
-  \ 'coc-prettier'
+  \ 'coc-prettier',
   \ ]
