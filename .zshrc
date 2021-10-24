@@ -1,41 +1,60 @@
-# Environment Variables
-GOROOT="/usr/local/go"
-GOPATH="$HOME/go"
-GOBIN="$GOROOT/bin"
-EXERCISM="$HOME/Exercism"
-DENO_INSTALL="/home/joshua/.deno"
-ANDROID_STUDIO="$HOME/android-studio"
-NVIM="$HOME/Neovim"
-FLUTTER="$HOME/Flutter"
-SNAP="/var/lib/snapd/snap"
-JAVA="/usr/lib/jvm/jdk1.8.0_231"
-RUST="$HOME/.cargo/env"
-PROTOC="$HOME/Protoc"
-YARN_BIN="$HOME/.yarn/bin"
-YARN_MODULES="$HOME/.config/yarn/global/node_modules/.bin"
-EDITOR='nvim'
-ZSH="/home/joshua/.oh-my-zsh"
+##### Environment Variables #####
 
-# PATH
-export PATH="$PATH:$GOROOT:$GOPATH:$GOBIN:$EXERCISM/bin:$DENO_INSTALL/bin:$PROTOC/bin:$ANDROID_STUDIO/bin:$NVIM/bin:$FLUTTER/bin:$JAVA/bin:$RUST:$PROTOC/bin:$SNAP/bin:$YARN_BIN:$YARN_MODULES:$EDITOR:$ZSH"
+## Oh My Zsh Variable ##
+export ZSH="$HOME/.oh-my-zsh"
 
-# NVM
+## Neovim ##
+export NVIM="$HOME/Neovim"
+
+## Terminal Editor ##
+export EDITOR='nvim'
+
+## Android ##
+export ANDROID_STUDIO="$HOME/android-studio"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_ADV_HOME="$HOME/.android/avd"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+## JAVA ##
+export JAVA="/usr/lib/jvm/jdk1.8.0_231"
+
+## PROTOC ##
+export PROTOC="$HOME/Protoc"
+
+## NVM ##
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-### Custom Features ###
+## Yarn ##
+YARN_BIN="$HOME/.yarn/bin"
+YARN_MODULES="$HOME/.config/yarn/global/node_modules/.bin"
+
+## Go - Golang ##
+export GOROOT="/usr/local/go"
+export GOPATH="$HOME/go"
+GOBIN="$GOROOT/bin"
+
+## PATH ##
+export PATH="$PATH:$YARN_BIN:$YARN_MODULES:$GOBIN:$PROTOC/bin:$ANDROID_STUDIO/bin:$NVIM/bin:$JAVA/bin"
+
+##### Custom Features #####
 
 # My own zsh theme
-ZSH_THEME="jam" 
+ZSH_THEME="jam"
+
+## Default zsh theme ##
+# ZSH_THEME="agnoster"
 
 # Plugins
 plugins=(git zsh-autosuggestions)
-source $ZSH/oh-my-zsh.sh
 
-# Aliases
+## Aliases ##
 alias v=neovim
 alias c=clear
-alias gh=printGithub
 alias gl=printGitlab
 alias zsh-config="nvim $HOME/.zshrc"
 alias vim-config="nvim $HOME/.vimrc"
@@ -47,6 +66,7 @@ alias repos="cd /etc/yum.repos.d/"
 alias f="fzf"
 alias ondock="systemctl start docker"
 alias upgrade="sudo dnf upgrade"
+alias matrix="npx matrix-rain"
 
 # Aliases Functions
 function neovim {
@@ -57,20 +77,16 @@ function neovim {
   fi
 }
 
-function printGithub {
-  echo 'Github'
-  echo 'Github code'
-}
-
 function printGitlab {
   echo 'Gitlab'
   echo 'Gitlab code'
 }
 
-
 ### Native Features ###
 
 export UPDATE_ZSH_DAYS=7
-ENABLE_CORRECTION="true"ng the strftime function format specifications,
-# see 'man strftime' for details.
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
+
+source $ZSH/oh-my-zsh.sh
