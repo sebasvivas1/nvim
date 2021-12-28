@@ -19,6 +19,15 @@ let mapleader=' '
 :inoremap ññ <Esc>
 :xnoremap ññ <Esc>
 
+:vnoremap <C-c> "*y
+
+" Custom Function
+function! PrintFile()
+  exe ":!cat %"
+endfunction
+
+:noremap <Leader>x :call PrintFile()<cr>
+
 " NERDTree Maps
 function! OpenExplorer()
   if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)

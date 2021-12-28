@@ -42,7 +42,7 @@ endfunction
 let g:vim_vue_plugin_load_full_syntax = 1
 let g:vim_vue_plugin_use_typescript = 1
 
-" Go Plugin Config
+" Vim-Go Plugin Config
 let g:go_fmt_command = "goimports"
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
@@ -80,16 +80,6 @@ au FileType css,scss let b:prettier_exec_cmd = "prettier-stylelint"
 
 let g:prettier#quickfix_enabled = 0
 let g:prettier#config#config_precedence = 'pref-file'
-let g:prettier#config#tab_width = '2'
-let g:prettier#config#use_tabs = 'false'
-let g:prettier#config#print_width = '80'
-let g:prettier#config#semi = 'false'
-let g:prettier#config#trailing_comma = 'none'
-  " let g:prettier#config#html_whitespace_sensitivity = 'css'
-  " let g:prettier#config#prose_wrap = 'preserve'
-  " let g:prettier#config#require_pragma = 'false'
-  " let g:prettier#config#single_quote = 'true'
-  " let g:prettier#vue_indent_script_and_style = 'true'
 
 " GitGutter Config
 let g:gitgutter_sign_added = "|" 

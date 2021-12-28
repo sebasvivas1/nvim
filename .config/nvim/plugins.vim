@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
   
   " Syntax / Languaje
   Plug 'pangloss/vim-javascript' " Javascript Languaje

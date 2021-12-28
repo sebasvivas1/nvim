@@ -10,7 +10,7 @@ export NVIM="$HOME/Neovim"
 export EDITOR='nvim'
 
 ## Android ##
-export ANDROID_STUDIO="$HOME/android-studio"
+export ANDROID_STUDIO="$HOME/Library/AndroidStudio"
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 export ANDROID_ADV_HOME="$HOME/.android/avd"
@@ -23,7 +23,7 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export JAVA="/usr/lib/jvm/jdk1.8.0_231"
 
 ## PROTOC ##
-export PROTOC="$HOME/Protoc"
+export PROTOC="$HOME/Library/Protoc"
 
 ## NVM ##
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -34,12 +34,12 @@ YARN_BIN="$HOME/.yarn/bin"
 YARN_MODULES="$HOME/.config/yarn/global/node_modules/.bin"
 
 ## Go - Golang ##
-export GOROOT="/usr/local/go"
-export GOPATH="$HOME/go"
-GOBIN="$GOROOT/bin"
+export GOROOT="/usr/local/go" # Instalaciòn de Go
+export GOPATH="$HOME/Library/go" # Instalaciòn de los binarios de 3ros
+GOBIN="$GOROOT/bin" # Binario de Go
 
 ## PATH ##
-export PATH="$PATH:$YARN_BIN:$YARN_MODULES:$GOBIN:$PROTOC/bin:$ANDROID_STUDIO/bin:$NVIM/bin:$JAVA/bin"
+export PATH="$PATH:$YARN_BIN:$YARN_MODULES:$GOBIN:$PROTOC/bin:$ANDROID_STUDIO/bin:$NVIM/bin:$JAVA/bin:$GOPATH/bin"
 
 ##### Custom Features #####
 
@@ -52,14 +52,17 @@ ZSH_THEME="jam"
 # Plugins
 plugins=(git zsh-autosuggestions)
 
+# Plugins Config
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#876300,bg=NONE,bold"
+bindkey '^ ' autosuggest-accept
+
 ## Aliases ##
 alias v=neovim
 alias c=clear
-alias gl=printGitlab
-alias zsh-config="nvim $HOME/.zshrc"
-alias vim-config="nvim $HOME/.vimrc"
+alias glc=printGitlab
+alias zshconfig="nvim $HOME/.zshrc"
+alias vimconfig="nvim $HOME/.config/nvim/init.vim"
 alias installed="dnf list installed"
-alias studio="$ANDROID_STUDIO/bin/studio.sh"
 alias files="nautilus . &"
 alias off="shutdown -P now"
 alias repos="cd /etc/yum.repos.d/"
@@ -67,6 +70,8 @@ alias f="fzf"
 alias ondock="systemctl start docker"
 alias upgrade="sudo dnf upgrade"
 alias matrix="npx matrix-rain"
+alias reload="source /home/joshua/.zshrc"
+alias install=rpmInstall
 
 # Aliases Functions
 function neovim {
@@ -77,16 +82,25 @@ function neovim {
   fi
 }
 
-function printGitlab {
-  echo 'Gitlab'
-  echo 'Gitlab code'
+function rpmInstall {
+  if [ $# -eq 0 ]; then
+    echo "Invalid package"
+  else
+    rpm -Uvh $1
+  fi
 }
+
+function printGitlab {
+  echo 'Gitlab Code'
+  echo 'My Gitlab Code' | xclip -selection clipboard
+}
+
 
 ### Native Features ###
 
 export UPDATE_ZSH_DAYS=7
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
+# ENABLE_CORRECTION="true"
+# COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 source $ZSH/oh-my-zsh.sh
