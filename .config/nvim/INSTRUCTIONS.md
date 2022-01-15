@@ -5,8 +5,6 @@ configuration to work correctly
 
 ## Fonts
 
----
-
 The fonts used in this configuration are as follows:
 
 **DM Mono**:
@@ -15,9 +13,9 @@ The fonts used in this configuration are as follows:
 **JetBrains Mono**:
 [JetBrains Mono - Google Fonts](https://fonts.google.com/specimen/JetBrains+Mono?query=jet)
 
-## System Fonts
-
 ---
+
+## System Fonts
 
 For the icons that we know very well that they are managed with icon fonts, I
 use
@@ -30,9 +28,9 @@ In case it does not work, you can use:
 
 _I use Fedora/Linux with a Gnome v41._
 
-## Plugins
-
 ---
+
+## Plugins
 
 **FZF.vim** - [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
 
@@ -41,4 +39,4 @@ searching for a word in the whole project (which is quite useful) and a preview
 of the current file code (when you are in the search engine), you need to
 install the following plugin on your operating system:
 
-[The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+## [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
