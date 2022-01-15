@@ -6,7 +6,6 @@
   "prettier.arrowParens": "avoid",
   "prettier.bracketSpacing": true,
   "prettier.htmlWhitespaceSensitivity": "ignore",
-  "prettier.jsxBracketSameLine": false,
   "prettier.jsxSingleQuote": false,
   "prettier.printWidth": 80,
   "prettier.proseWrap": "preserve",
@@ -15,5 +14,6 @@
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "none",
   "prettier.useTabs": false,
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": false,
+  "coc.preferences.semanticTokensHighlights": false
 }

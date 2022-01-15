@@ -21,13 +21,6 @@ let mapleader=' '
 
 :vnoremap <C-c> "*y
 
-" Custom Function
-function! PrintFile()
-  exe ":!cat %"
-endfunction
-
-:noremap <Leader>x :call PrintFile()<cr>
-
 " NERDTree Maps
 function! OpenExplorer()
   if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
@@ -82,8 +75,6 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> U :call <SID>show_documentation()<CR>
 
 " Prettier / CocPrettier Maps
-" :noremap <Leader>p :Prettier<cr>
-" command! -nargs=0 Prettier :CocCommand prettier.formatFile
 :noremap <Leader>p :CocCommand prettier.formatFile<cr>
 
 " GitGutter Maps
@@ -93,9 +84,6 @@ nnoremap <silent> U :call <SID>show_documentation()<CR>
 " Show Parent Folder
 function! ShowRelativeRoute()
   echo expand('%:f:h')
-  "" echo @%
 endfunction
 
 :noremap <Leader>sf :call ShowRelativeRoute()<cr>
-
-" Surround

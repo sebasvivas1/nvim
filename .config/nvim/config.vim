@@ -1,7 +1,7 @@
 " Config File
 
 " Python
-let g:python3_host_prog = '/usr/bin/python3.8'
+let g:python3_host_prog = '/usr/bin/python3.10'
 
 " Lightline Config
 let g:lightline = {
@@ -37,6 +37,9 @@ endfunction
 function! IsReadonly()
   return &readonly ? "" : ''
 endfunction
+
+" Vim-JSX-Pretty
+let g:vim_jsx_pretty_colorful_config = 1
 
 " Vim-Vue
 let g:vim_vue_plugin_load_full_syntax = 1
@@ -95,7 +98,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|coverage\'
 " Coc Defautl Config
 let g:coc_global_extensions = [
   \ 'coc-css',
-  \ 'coc-highlight',
   \ 'coc-html',
   \ 'coc-json',
   \ 'coc-tag',
@@ -103,3 +105,6 @@ let g:coc_global_extensions = [
   \ 'coc-vetur',
   \ 'coc-prettier',
   \ ]
+
+
+
