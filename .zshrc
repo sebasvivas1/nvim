@@ -25,6 +25,9 @@ export JAVA="/usr/lib/jvm/jdk1.8.0_231"
 ## PROTOC ##
 export PROTOC="$HOME/Library/Protoc"
 
+## PYTHON3 ##
+export PYTHON3="/usr/bin/python3"
+
 ## NVM ##
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -39,7 +42,7 @@ export GOPATH="$HOME/Library/go" # Instalaciòn de los binarios de 3ros
 GOBIN="$GOROOT/bin" # Binario de Go
 
 ## PATH ##
-export PATH="$PATH:$YARN_BIN:$YARN_MODULES:$GOBIN:$PROTOC/bin:$ANDROID_STUDIO/bin:$NVIM/bin:$JAVA/bin:$GOPATH/bin"
+export PATH="$PATH:$YARN_BIN:$YARN_MODULES:$GOBIN:$PROTOC/bin:$ANDROID_STUDIO/bin:$NVIM/bin:$JAVA/bin:$GOPATH/bin:$PYTHON3"
 
 ##### Custom Features #####
 
@@ -60,6 +63,7 @@ bindkey '^ ' autosuggest-accept
 alias v=neovim
 alias c=clear
 alias glc=printGitlab
+alias pg=printPersonalGitlab
 alias zshconfig="nvim $HOME/.zshrc"
 alias vimconfig="nvim $HOME/.config/nvim/init.vim"
 alias installed="dnf list installed"
@@ -91,8 +95,13 @@ function rpmInstall {
 }
 
 function printGitlab {
-  echo 'Gitlab Code'
-  echo 'My Gitlab Code' | xclip -selection clipboard
+  echo '300Dev Gitlab'
+  echo 'Gitlab Code' | xclip -selection clipboard
+}
+
+function printPersonalGitlab {
+  echo 'Personal Gitlab'
+  echo 'Personal Gitlab Code' | xclip -selection clipboard
 }
 
 
