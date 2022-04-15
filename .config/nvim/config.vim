@@ -5,12 +5,11 @@ let g:python3_host_prog = '/usr/bin/python3.10'
 
 " Lightline Config
 let g:lightline = {
-\ 'colorscheme': 'gruvbox_material',
+\ 'colorscheme': 'gruvbox_material', 
 \ 'active': {
-\   'left': [ [ 'mode', 'paste' ],
-\             [ 'branch' ], ['isReadondly', 'filename', 'modified' ] ],
-\   'right': [ [ 'lineinfo' ],
-\              [ 'filetype' ] ]
+\   'left': [ ['mode', 'paste'],
+\             ['branch'], ['isReadondly', 'filename', 'modified' ] ],
+\   'right': [['percent'], ['lineinfo'], ['filetype']]
 \ },
 \ 'tab': {
 \   'active': [ 'filename', 'modified' ],
@@ -24,18 +23,32 @@ let g:lightline = {
 \   'inactive': 'inactive',
 \   'relpath': '%f'
 \ },
+\ 'mode_map': {
+\ 'n' : 'N',
+\ 'i' : 'I',
+\ 'R' : 'R',
+\ 'v' : 'V',
+\ 'V' : 'VL',
+\ "\<C-v>": 'VB',
+\ 'c' : 'C',
+\ 's' : 'S',
+\ 'S' : 'SL',
+\ "\<C-s>": 'SB',
+\ 't': 'T',
+\ },
 \ }
 
 function! Fugitive()
   if exists('*FugitiveHead')
     let branch = FugitiveHead()
-    return branch !=# '' ? " ".branch : ''
+    " return branch !=# '' ? " ".branch : ''
+    return branch !=# '' ? branch : ''
   endif
   return ''
 endfunction
 
 function! IsReadonly()
-  return &readonly ? "" : ''
+  return &readonly ? "🔒" : ''
 endfunction
 
 " Vim-JSX-Pretty
@@ -63,8 +76,9 @@ let NERDTreeMinimalUI = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeShowLineNumbers = 1
 let NERDTreeIgnore = ['node_modules', '.next', 'coverage']
-let g:NERDTreeDirArrowExpandable = ""
-let g:NERDTreeDirArrowCollapsible = ""
+let NERDTreeWinSize = 35
+let g:NERDTreeDirArrowExpandable = "🞂"
+let g:NERDTreeDirArrowCollapsible = "🞃"
  
 " NERDCommenter Config
 let g:NERDSpaceDelims = 1  " Agregar un espacio después del delimitador del comentario
@@ -78,6 +92,9 @@ let g:vue_pre_processors = ['sass', 'scss', 'javascript']
 let g:gruvbox_material_palette = "original"
 let g:gruvbox_material_background = 'hard'
 
+" Everforest Config
+let g:everforest_background = 'hard'
+
 " Prettier Config
 au FileType css,scss let b:prettier_exec_cmd = "prettier-stylelint"
 
@@ -85,12 +102,12 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#config#config_precedence = 'pref-file'
 
 " GitGutter Config
-let g:gitgutter_sign_added = "|" 
-let g:gitgutter_sign_modified = "|"
-let g:gitgutter_sign_removed = ""
-let g:gitgutter_sign_removed_first_line = ""
-let g:gitgutter_sign_removed_above_and_below = ""
-let g:gitgutter_sign_modified_removed = "|"
+let g:gitgutter_sign_added = "∣" 
+let g:gitgutter_sign_modified = "∣"
+let g:gitgutter_sign_removed = "🞂"
+let g:gitgutter_sign_removed_first_line = "↟"
+let g:gitgutter_sign_removed_above_and_below = "♦"
+let g:gitgutter_sign_modified_removed = "∣"
 
 " CTRLP Config
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|coverage\'
@@ -104,7 +121,9 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-vetur',
   \ 'coc-prettier',
+  \ 'coc-omni'
   \ ]
 
-
-
+" autocmd BufNew,BufEnter *.go execute "silent! CocDisable"
+" autocmd BufLeave *.go execute "silent! CocEnable"
+" let g:deoplete#enable_at_startup = 1

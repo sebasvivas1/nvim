@@ -1,8 +1,8 @@
 {
   "diagnostic.errorSign": "✖",
-  "diagnostic.warningSign": "",
-  "diagnostic.infoSign": "",
-  "diagnostic.hintSign": "",
+  "diagnostic.warningSign": "↦",
+  "diagnostic.infoSign": "ｉ",
+  "diagnostic.hintSign": "»",
   "prettier.arrowParens": "avoid",
   "prettier.bracketSpacing": true,
   "prettier.htmlWhitespaceSensitivity": "ignore",
@@ -14,6 +14,5 @@
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "none",
   "prettier.useTabs": false,
-  "prettier.eslintIntegration": false,
-  "coc.preferences.semanticTokensHighlights": false
+  "prettier.eslintIntegration": false
 }

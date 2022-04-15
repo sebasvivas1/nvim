@@ -19,8 +19,6 @@ let mapleader=' '
 :inoremap ññ <Esc>
 :xnoremap ññ <Esc>
 
-:vnoremap <C-c> "*y
-
 " NERDTree Maps
 function! OpenExplorer()
   if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
@@ -34,7 +32,7 @@ function! OpenExplorer()
 endfunction
 
 :noremap <C-n> :call OpenExplorer()<cr>
-" :noremap <C-n> :NERDTreeToggle<CR> 
+" " :noremap <C-n> :NERDTreeToggle<CR>
 
 " Fuzzy Finder Maps
 function! OpenSearch() 
@@ -47,14 +45,38 @@ function! OpenSuperSearch()
   echo "Open Super Search"
 endfunction
 
-function! GitStatus() 
+function! GitStatus()
   exe ":GFiles?"
   echo "Git Status Command"
+endfunction
+
+function! GitLog() 
+  exe ":Commits"
+  echo "Git Log Command"
 endfunction
 
 :noremap <C-p> :call OpenSearch()<cr>
 :noremap <C-f> :call OpenSuperSearch()<cr>
 :noremap <C-s> :call GitStatus()<cr>
+:noremap <C-g><C-l> :call GitLog()<cr>
+
+" Copy File
+function! Copy() 
+  exe ":!xclip -selection clipboard < %"
+  echo "Copy File"
+endfunction
+:noremap <Leader>ff :call Copy()<cr>
+
+" GitGutter Maps
+:noremap <Leader>g :GitGutterPreviewHunk<cr>
+:noremap <Leader>gg :GitGutterUndoHunk<cr>
+
+" Show Parent Folder
+function! ShowRelativeRoute()
+  echo expand('%:f:h')
+endfunction
+
+:noremap <Leader>sf :call ShowRelativeRoute()<cr>
 
 " Coc Maps
 inoremap <silent><expr> <TAB>
@@ -76,14 +98,3 @@ nnoremap <silent> U :call <SID>show_documentation()<CR>
 
 " Prettier / CocPrettier Maps
 :noremap <Leader>p :CocCommand prettier.formatFile<cr>
-
-" GitGutter Maps
-:noremap <Leader>g :GitGutterPreviewHunk<cr>
-:noremap <Leader>gg :GitGutterUndoHunk<cr>
-
-" Show Parent Folder
-function! ShowRelativeRoute()
-  echo expand('%:f:h')
-endfunction
-
-:noremap <Leader>sf :call ShowRelativeRoute()<cr>

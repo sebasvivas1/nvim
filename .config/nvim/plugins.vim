@@ -1,14 +1,9 @@
 call plug#begin('~/.config/nvim/plugged')
   
   " Syntax / Languaje
-  Plug 'pangloss/vim-javascript' " Javascript Languaje
-  Plug 'HerringtonDarkholme/yats.vim' " Typescript Languaje
-  Plug 'maxmellon/vim-jsx-pretty' " JSX Syntax
-  Plug 'neoclide/vim-jsx-improve' " JSX Syntax Improve
-  Plug 'peitalin/vim-jsx-typescript' " JSX Syntax typescript Support
-  Plug 'leafOfTree/vim-vue-plugin'
+  Plug 'sheerun/vim-polyglot'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go Languaje
-
+  
   " Features
   Plug 'preservim/nerdtree' " Sidebar files feature
   Plug 'itchyny/lightline.vim' " Lightline
