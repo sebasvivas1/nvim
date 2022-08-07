@@ -5,11 +5,14 @@ let mapleader=' '
 :noremap <C-j> <C-w>j
 :noremap <C-k> <C-w>k
 :noremap <C-l> <C-w>l
+:noremap <C-w> <C-w>=<cr>
+
 :noremap <Leader>k :tabn<cr>
 :noremap <Leader>j :tabp<cr>
 :noremap <Leader>w :w<cr>
 :noremap <Leader>q :q<cr>
 :noremap <Leader>Q :q!<cr>
+
 
 :vnoremap ;; <Esc>
 :inoremap ;; <Esc>

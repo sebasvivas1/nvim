@@ -29,6 +29,7 @@ set updatetime=300
 set undofile
 set undodir=~/.config/nvim/undo
 set undolevels=50
+set guifont="/home/joshua/.local/share/fonts/JetBrainsMono-Medium.ttf"
 " set mouse=a
 
 syntax enable
@@ -38,4 +39,7 @@ so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
 
-colorscheme gruvbox-material
+" colorscheme gruvbox-material
+colorscheme darcula
+" colorscheme nord
+

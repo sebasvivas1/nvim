@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
   " Syntax / Languaje
   Plug 'sheerun/vim-polyglot'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go Languaje
+  Plug 'rust-lang/rust.vim'
   
   " Features
   Plug 'preservim/nerdtree' " Sidebar files feature
@@ -20,8 +21,14 @@ call plug#begin('~/.config/nvim/plugged')
 
   " Themes & Interface
   Plug 'sainnhe/gruvbox-material' " Retro Theme for Vim in Material Desing
-
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'doums/darcula'
+ 
   " Coc
   Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+  Plug 'yaegassy/coc-volar', {'do': 'yarn install --immutable'}
+
+  " Github Copilot
+  Plug 'github/copilot.vim'
 
 call plug#end()

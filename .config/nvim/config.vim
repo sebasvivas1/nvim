@@ -4,15 +4,17 @@
 let g:python3_host_prog = '/usr/bin/python3.10'
 
 " Lightline Config
+let bar_color = ['gruvbox_material', 'darculaOriginal', "nord"]
+
 let g:lightline = {
-\ 'colorscheme': 'gruvbox_material', 
-\ 'active': {
+\ 'colorscheme': bar_color[1],
+\ 'active': { 
 \   'left': [ ['mode', 'paste'],
 \             ['branch'], ['isReadondly', 'filename', 'modified' ] ],
 \   'right': [['percent'], ['lineinfo'], ['filetype']]
 \ },
 \ 'tab': {
-\   'active': [ 'filename', 'modified' ],
+\   'active': [ 'tabnum', 'filename', 'modified' ],
 \ },
 \ 'component_function': {
 \   'branch': 'Fugitive',
@@ -21,20 +23,7 @@ let g:lightline = {
 \ 'component': {
 \   'bufnum': '%n',
 \   'inactive': 'inactive',
-\   'relpath': '%f'
-\ },
-\ 'mode_map': {
-\ 'n' : 'N',
-\ 'i' : 'I',
-\ 'R' : 'R',
-\ 'v' : 'V',
-\ 'V' : 'VL',
-\ "\<C-v>": 'VB',
-\ 'c' : 'C',
-\ 's' : 'S',
-\ 'S' : 'SL',
-\ "\<C-s>": 'SB',
-\ 't': 'T',
+\   'relpath': '%f',
 \ },
 \ }
 
@@ -69,6 +58,9 @@ let g:go_highlight_build_constraints = 1
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
+" Rust
+let g:rustfmt_autosave = 1
+
 " NERDTree Config
 let NERDTreeShowHidden = 0
 let NERDTreeQuitOnOpen = 1
@@ -91,9 +83,6 @@ let g:vue_pre_processors = ['sass', 'scss', 'javascript']
 " Gruvbox-Material Config
 let g:gruvbox_material_palette = "original"
 let g:gruvbox_material_background = 'hard'
-
-" Everforest Config
-let g:everforest_background = 'hard'
 
 " Prettier Config
 au FileType css,scss let b:prettier_exec_cmd = "prettier-stylelint"
@@ -119,10 +108,10 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-tag',
   \ 'coc-tsserver',
-  \ 'coc-vetur',
   \ 'coc-prettier',
   \ 'coc-omni'
   \ ]
+
 
 " autocmd BufNew,BufEnter *.go execute "silent! CocDisable"
 " autocmd BufLeave *.go execute "silent! CocEnable"

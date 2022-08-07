@@ -26,7 +26,7 @@ In case it does not work, you can use:
 
 [Nerd Fonts](https://www.nerdfonts.com)
 
-_I use Fedora/Linux with a Gnome v41._
+_I use Fedora/Linux with a Gnome v42.3._
 
 ---
 
