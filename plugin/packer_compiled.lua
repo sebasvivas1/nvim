@@ -154,6 +154,16 @@ _G.packer_plugins = {
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+    url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -173,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 

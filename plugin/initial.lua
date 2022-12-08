@@ -30,11 +30,14 @@ return require('packer').startup({
 		use 'junegunn/fzf.vim'
 		use 'joshdev15/nvim-tabline'
 		use 'nvim-lualine/lualine.nvim'
+		use 'tpope/vim-surround'
 
 		use {
 		  'nvim-treesitter/nvim-treesitter',
 		  run = ':TSUpdate'
 		}
+		use 'p00f/nvim-ts-rainbow'
+		use 'windwp/nvim-ts-autotag'
 
 		-- Themes
 		use 'sainnhe/gruvbox-material'
