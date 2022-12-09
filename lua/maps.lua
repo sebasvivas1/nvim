@@ -20,6 +20,10 @@ map("n", "<C-k>", "<C-w>k", true, false)
 map("n", "<C-l>", "<C-w>l", true, false)
 map("n", "<C-w>", "<C-w>=", true, false)
 
+-- GitGutter
+map("n", "<Leader>g", ":GitGutterPreviewHunk<CR>", true, false)
+map("n", "<Leader>gg", ":GitGutterUndoHunk<CR>", true, false)
+
 -- escape
 map("v", ";;", "<ESC>", true, false)
 map("i", ";;", "<ESC>", true, false)

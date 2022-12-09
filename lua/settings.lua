@@ -1,4 +1,3 @@
-
 -- Gruvbox Theme
 -- -- [hard, medium, soft]
 -- -- [material, mix, original]

@@ -7,9 +7,16 @@ end
 
 return require('packer').startup({
   function(use)
-	  -- Package Manager
+		-- Package Manager
 		use 'wbthomason/packer.nvim'
-		
+
+		-- Languages & Syntax
+		use 'sheerun/vim-polyglot'
+		-- use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
+		-- use 'styled-components/vim-styled-components'
+		-- use 'ap/vim-css-color'
+		-- use { 'prettier/vim-prettier',  run = 'yarn install --frozen-lockfile --production' }
+
 		-- LSP
 		use 'neovim/nvim-lspconfig'
 		use 'nvim-lua/plenary.nvim'

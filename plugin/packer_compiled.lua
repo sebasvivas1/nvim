@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-surround",

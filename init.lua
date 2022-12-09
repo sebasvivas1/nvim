@@ -27,6 +27,7 @@ set.splitright = true -- Vertical splits will automatically be to the right
 require "maps"
 require "settings"
 require "snippets"
+require "lsp"
 
 
 vim.cmd([[colorscheme gruvbox-material]])
