@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   fzf = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/fzf",
@@ -183,11 +188,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
-  },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-polyglot",
-    url = "https://github.com/sheerun/vim-polyglot"
   },
   ["vim-prettier"] = {
     loaded = true,

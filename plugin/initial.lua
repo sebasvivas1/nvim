@@ -11,7 +11,7 @@ return require('packer').startup({
 		use 'wbthomason/packer.nvim'
 
 		-- Languages & Syntax
-		use 'sheerun/vim-polyglot'
+		-- use 'sheerun/vim-polyglot'
 		use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
 		use 'styled-components/vim-styled-components'
 		use 'ap/vim-css-color'
@@ -44,6 +44,8 @@ return require('packer').startup({
 		  run = ':TSUpdate'
 		}
 
+		-- flutter dev
+		use 'akinsho/flutter-tools.nvim'
 		-- Themes
 		use 'sainnhe/gruvbox-material'
 

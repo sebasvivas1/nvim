@@ -28,6 +28,7 @@ require "maps"
 require "settings"
 require "snippets"
 require "lsp"
+require "fluttertools"
 
 
 vim.cmd([[colorscheme gruvbox-material]])
