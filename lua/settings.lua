@@ -7,6 +7,12 @@ vim.g.gruvbox_material_better_performance = 1
 vim.g.gruvbox_material_ui_contrast = "low"
 vim.g.gruvbox_material_transparent_background = 2
 
+-- Copilot
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.g.copilot_assume_mapped = true
+vim.g.copilot_tab_fallback = ""
+
 -- Vim JSX Pretty
 vim.g.vim_jsx_pretty_colorful_config = 1
 

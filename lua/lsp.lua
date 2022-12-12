@@ -4,7 +4,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local lspconfig = require('lspconfig')
 
-local servers = { 'tsserver' , 'gopls', 'cssls', 'html', 'jsonls' }
+local servers = { 'tsserver' , 'gopls', 'cssls', 'html', 'jsonls', 'eslint', 'pyright', 'tailwindcss' }
 
 local my_custom_on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')

@@ -12,10 +12,10 @@ return require('packer').startup({
 
 		-- Languages & Syntax
 		use 'sheerun/vim-polyglot'
-		-- use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
-		-- use 'styled-components/vim-styled-components'
-		-- use 'ap/vim-css-color'
-		-- use { 'prettier/vim-prettier',  run = 'yarn install --frozen-lockfile --production' }
+		use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
+		use 'styled-components/vim-styled-components'
+		use 'ap/vim-css-color'
+		use { 'prettier/vim-prettier',  run = 'yarn install --frozen-lockfile --production' }
 
 		-- LSP
 		use 'neovim/nvim-lspconfig'
@@ -43,8 +43,6 @@ return require('packer').startup({
 		  'nvim-treesitter/nvim-treesitter',
 		  run = ':TSUpdate'
 		}
-		use 'p00f/nvim-ts-rainbow'
-		use 'windwp/nvim-ts-autotag'
 
 		-- Themes
 		use 'sainnhe/gruvbox-material'

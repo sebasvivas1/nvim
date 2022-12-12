@@ -154,16 +154,6 @@ _G.packer_plugins = {
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-ts-autotag"] = {
-    loaded = true,
-    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
-    url = "https://github.com/windwp/nvim-ts-autotag"
-  },
-  ["nvim-ts-rainbow"] = {
-    loaded = true,
-    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
-    url = "https://github.com/p00f/nvim-ts-rainbow"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -179,15 +169,35 @@ _G.packer_plugins = {
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["vim-css-color"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-css-color",
+    url = "https://github.com/ap/vim-css-color"
+  },
   ["vim-gitgutter"] = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-go"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-go",
+    url = "https://github.com/fatih/vim-go"
+  },
   ["vim-polyglot"] = {
     loaded = true,
     path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-polyglot",
     url = "https://github.com/sheerun/vim-polyglot"
+  },
+  ["vim-prettier"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-prettier",
+    url = "https://github.com/prettier/vim-prettier"
+  },
+  ["vim-styled-components"] = {
+    loaded = true,
+    path = "/Users/seb/.local/share/nvim/site/pack/packer/start/vim-styled-components",
+    url = "https://github.com/styled-components/vim-styled-components"
   },
   ["vim-surround"] = {
     loaded = true,
